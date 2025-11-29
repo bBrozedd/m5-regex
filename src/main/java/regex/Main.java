@@ -61,7 +61,7 @@ public class Main {
      */
     public static List<String> extractEmails(String str) {
         if (str == null){return new ArrayList<>();}
-        final Pattern pattern = Pattern.compile("[^\\s]+[(@mail.)@]utoronto.ca");
+        final Pattern pattern = Pattern.compile("\\S+[(@mail.)@]utoronto.ca");
         final Matcher matcher = pattern.matcher(str);
         final List<String> result = new ArrayList<>();
         while (matcher.find()) {
